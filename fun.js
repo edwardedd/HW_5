@@ -53,9 +53,9 @@ console.log(min(196,888, 999));
 /////7
 function firstAndLastToUpper(str) {
   let newStr = str[0].toUpperCase() + str.slice(1, -1) + str[str.length-1].toUpperCase();
-  console.log(newStr);
+  return newStr;
 }
-firstAndLastToUpper('rrhadfgsfeeaw');
+console.log(firstAndLastToUpper('rrhadfgsfeeaw'));
 
 
 
@@ -79,9 +79,9 @@ function toUppercase(str) {
   for(let i = 0; i <= str.length-1; i++){
     newStr += str[i].toUpperCase();
   }
-  console.log(newStr);
+  return newStr;
 }
-toUppercase('abc');
+console.log(toUppercase('abc'));
 
 ////10
 
@@ -92,9 +92,9 @@ function removeDuplicationLetters(str){
 		uniq += str[i];
 		}
 	}
-  console.log(uniq);
+  return uniq
 }
-removeDuplicationLetters('London is a capital of Great Britain');
+console.log(removeDuplicationLetters('London is a capital of Great Britain'));
 
 ///11
 
@@ -106,10 +106,10 @@ function fibonacci(n){
     a = b;
     b = c;
   }
-  console.log(b);
+  return b;
 }
 
-fibonacci(7);
+console.log(fibonacci(7));
 
 
 ////6

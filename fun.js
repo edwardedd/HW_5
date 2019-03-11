@@ -1,27 +1,27 @@
 ///1
 function convert(amount) {
-	let a = amount*8;
-	return a;	
+  const conv = 8;
+	const am = amount*conv;
+	return am;	
 };
 console.log(convert(4));
 ///2
 
 
 function qwer(str) {
-	let a = str.split("");
-	let b = a.reverse();
-	let c = b.join("");
-	return c;
-	console.log(c);
+	const a = str.split("");
+	let revrs = a.reverse();
+	let join = revrs.join("");
+	return join;	
 }
 console.log(qwer('saghhj'));
 ///3
 
 
 function staircase(n) {
-  var line = Array(n + 1).fill(' ');
+  let line = Array(n + 1).fill(' ');
   //line[n] = '';
-  for (var i = n - 1; i >= 0; i--) {
+  for (let i = n - 1; i >= 0; i--) {
     line[i] = '#';
     console.log(line.join(''));
   }
@@ -34,17 +34,17 @@ function sumRange(start, end) {
   for(let i = start; i <= end; i++){
     sum+=i;
   }
-  console.log(sum);
+  return sum;
 }
-sumRange(2, 4);
+console.log(sumRange(2, 4));
 
 //////5
 
 function min(a, b, c) { 
-  let minNumber = Math.min(a, b, c);
-  console.log(minNumber);
+  const minNumber = Math.min(a, b, c);
+  return minNumber;
 }
-min(196,888, 999);
+console.log(min(196,888, 999));
 
 /////6
 
@@ -55,7 +55,7 @@ function firstAndLastToUpper(str) {
   let newStr = str[0].toUpperCase() + str.slice(1, -1) + str[str.length-1].toUpperCase();
   console.log(newStr);
 }
-firstAndLastToUpper('abc');
+firstAndLastToUpper('rrhadfgsfeeaw');
 
 
 
@@ -65,9 +65,9 @@ function cursorCheck(str) {
   if(newStr.includes("ostap") 
      || newStr.includes("ironman") 
      || newStr.includes("cursor")){
-    console.log('true');
+    return true;
   } else {
-    console.log('false');
+    return false;
   }
 }
 cursorCheck('ostap');
@@ -127,3 +127,7 @@ function printPyramid(n){
 	}
 }
 printPyramid(8)
+
+
+
+

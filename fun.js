@@ -10,8 +10,8 @@ console.log(convert(4));
 
 function qwer(str) {
 	const a = str.split("");
-	let revrs = a.reverse();
-	let join = revrs.join("");
+	const revrs = a.reverse();
+	const join = revrs.join("");
 	return join;	
 }
 console.log(qwer('saghhj'));
@@ -52,7 +52,7 @@ console.log(min(196,888, 999));
 
 /////7
 function firstAndLastToUpper(str) {
-  let newStr = str[0].toUpperCase() + str.slice(1, -1) + str[str.length-1].toUpperCase();
+  const newStr = str[0].toUpperCase() + str.slice(1, -1) + str[str.length-1].toUpperCase();
   return newStr;
 }
 console.log(firstAndLastToUpper('rrhadfgsfeeaw'));
@@ -77,11 +77,17 @@ cursorCheck('ostap');
 function toUppercase(str) {
   let newStr = '';
   for(let i = 0; i <= str.length-1; i++){
-    newStr += str[i].toUpperCase();
+   let symb = str.charCodeAt(i);
+    if (symb >= 97 && symb <= 122){
+    newStr += String.fromCharCode(symb - 32);
+    }
+  else{
+    newStr += String.fromCharCode(symb);
+    }
   }
   return newStr;
 }
-console.log(toUppercase('abc'));
+console.log(toUpperCase("dofobbkvlfkfgfkdsafTTee"));
 
 ////10
 
